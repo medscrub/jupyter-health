@@ -138,21 +138,116 @@ clinical_report = client.reidentify_text(analysis.content, result['sessionId'])
 
 ## 🔒 FHIR Resources (99.9% Accuracy)
 
-MedScrub supports 10 FHIR R4 resource types with deterministic field-level de-identification:
+MedScrub supports **77 FHIR R4 resource types** with deterministic field-level de-identification:
 
-✅ **Patient** - Demographics, contact info, identifiers
-✅ **Practitioner** - Provider information
-✅ **Observation** - Vitals, labs, measurements
-✅ **Condition** - Diagnoses, problems
-✅ **MedicationRequest** - Prescriptions
-✅ **Encounter** - Visits, hospitalizations
-✅ **AllergyIntolerance** - Allergies
-✅ **DiagnosticReport** - Lab reports, imaging
-✅ **Procedure** - Surgeries, interventions
-✅ **Immunization** - Vaccinations
-✅ **Bundle** - Multiple resources with reference preservation
+### Core Clinical Resources
+- ✅ **Patient** - Demographics, contact info, identifiers
+- ✅ **Practitioner** - Provider information, credentials
+- ✅ **PractitionerRole** - Provider roles and specialties
+- ✅ **RelatedPerson** - Family members, emergency contacts
+- ✅ **Person** - Administrative person data
+- ✅ **Organization** - Healthcare organizations
+- ✅ **Location** - Facilities, rooms, geographic locations
 
-**Why 99.9% accurate?** Deterministic field mapping vs. pattern matching. We know exactly where PHI lives in FHIR.
+### Observations & Assessments
+- ✅ **Observation** - Vitals, labs, measurements
+- ✅ **Condition** - Diagnoses, problems, health conditions
+- ✅ **AllergyIntolerance** - Allergies and intolerances
+- ✅ **FamilyMemberHistory** - Family health history
+- ✅ **ClinicalImpression** - Clinical assessments
+- ✅ **DetectedIssue** - Identified clinical issues
+- ✅ **RiskAssessment** - Risk predictions
+- ✅ **AdverseEvent** - Adverse reactions
+
+### Medications
+- ✅ **Medication** - Medication definitions
+- ✅ **MedicationRequest** - Prescriptions
+- ✅ **MedicationAdministration** - Medication given to patient
+- ✅ **MedicationDispense** - Pharmacy dispensing
+- ✅ **MedicationStatement** - Patient medication history
+- ✅ **MedicationKnowledge** - Medication information
+
+### Procedures & Services
+- ✅ **Procedure** - Surgeries, interventions
+- ✅ **ServiceRequest** - Orders for services
+- ✅ **Immunization** - Vaccinations
+- ✅ **ImagingStudy** - Radiology studies (DICOM)
+- ✅ **Specimen** - Lab specimens
+
+### Encounters & Episodes
+- ✅ **Encounter** - Visits, hospitalizations
+- ✅ **EpisodeOfCare** - Care episodes
+- ✅ **Appointment** - Scheduled appointments
+- ✅ **AppointmentResponse** - Appointment confirmations
+- ✅ **Schedule** - Provider schedules
+- ✅ **Slot** - Available time slots
+
+### Diagnostics & Reports
+- ✅ **DiagnosticReport** - Lab reports, imaging results
+- ✅ **Media** - Photos, videos, audio
+- ✅ **DocumentReference** - Clinical documents
+- ✅ **Composition** - Document compositions
+
+### Care Planning & Management
+- ✅ **CarePlan** - Care plans
+- ✅ **CareTeam** - Care team members
+- ✅ **Goal** - Treatment goals
+- ✅ **RequestGroup** - Grouped requests
+- ✅ **Task** - Workflow tasks
+
+### Financial & Billing
+- ✅ **Claim** - Insurance claims
+- ✅ **ClaimResponse** - Claim adjudication
+- ✅ **ExplanationOfBenefit** - EOB statements
+- ✅ **Coverage** - Insurance coverage
+- ✅ **Account** - Patient accounts
+- ✅ **PaymentNotice** - Payment notifications
+- ✅ **PaymentReconciliation** - Payment reconciliation
+- ✅ **EligibilityRequest** - Coverage eligibility checks
+- ✅ **EligibilityResponse** - Eligibility results
+
+### Research & Studies
+- ✅ **ResearchStudy** - Clinical trials
+- ✅ **ResearchSubject** - Study participants
+
+### Communication & Consent
+- ✅ **Communication** - Communications
+- ✅ **CommunicationRequest** - Communication requests
+- ✅ **Consent** - Patient consent records
+
+### Nutrition & Prescriptions
+- ✅ **NutritionOrder** - Dietary orders
+- ✅ **VisionPrescription** - Eyewear prescriptions
+
+### Devices & Supplies
+- ✅ **Device** - Medical devices
+- ✅ **DeviceRequest** - Device orders
+- ✅ **DeviceUseStatement** - Device usage
+- ✅ **SupplyRequest** - Supply requests
+- ✅ **SupplyDelivery** - Supply delivery
+- ✅ **Substance** - Chemical substances
+- ✅ **HealthcareService** - Healthcare services
+
+### Questionnaires & Surveys
+- ✅ **Questionnaire** - Form definitions
+- ✅ **QuestionnaireResponse** - Survey responses
+
+### Infrastructure & Audit
+- ✅ **Provenance** - Data provenance
+- ✅ **AuditEvent** - Security audit events
+- ✅ **Endpoint** - Technical endpoints
+- ✅ **Flag** - Warning flags
+
+### Lists & Collections
+- ✅ **List** - Collections of resources
+- ✅ **Bundle** - Multiple resources with reference preservation
+
+### Referrals & Workflows
+- ✅ **ReferralRequest** - Referrals to specialists
+- ✅ **GuidanceResponse** - Clinical guidance
+- ✅ **MeasureReport** - Quality measure reports
+
+**Why 99.9% accurate?** Deterministic field mapping vs. pattern matching. We know exactly where PHI lives in FHIR structured data.
 
 ---
 
