@@ -53,7 +53,7 @@ jupyter notebook
 |----------|-------------|------|----------|
 | **[01_quickstart_api.ipynb](./notebooks/01_quickstart_api.ipynb)** | Traditional API integration | 5 min | Production pipelines, automation |
 | **[02_mcp_powered_workflow.ipynb](./notebooks/02_mcp_powered_workflow.ipynb)** ⭐ | AI-assisted with Claude Code | 15 min | **Exploratory analysis, research** |
-| **[03_fhir_resources.ipynb](./notebooks/03_fhir_resources.ipynb)** | All 10 FHIR resource types | 20 min | FHIR integration, EHR systems |
+| **[03_fhir_resources.ipynb](./notebooks/03_fhir_resources.ipynb)** | All 77 FHIR resource types | 20 min | FHIR integration, EHR systems |
 | **[04_data_science_workflow.ipynb](./notebooks/04_data_science_workflow.ipynb)** | End-to-end clinical research | 30 min | **Population health, ML models** |
 | **[05_mcp_demo_script.ipynb](./notebooks/05_mcp_demo_script.ipynb)** | Presentation demo | 5 min | Hackathons, JupyterCon demos |
 

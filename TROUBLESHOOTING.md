@@ -157,11 +157,12 @@ except json.JSONDecodeError as e:
 # Check resource type
 print(f"Resource type: {resource.get('resourceType')}")
 
-# Verify it's a supported type
-supported = ['Patient', 'Practitioner', 'Observation', 'Condition',
+# Verify it's a supported type (77 total resource types supported)
+# This is just a sample list of commonly used types
+supported_examples = ['Patient', 'Practitioner', 'Observation', 'Condition',
              'MedicationRequest', 'Encounter', 'AllergyIntolerance',
              'DiagnosticReport', 'Procedure', 'Immunization']
-print(f"Supported: {resource.get('resourceType') in supported}")
+print(f"Is common type: {resource.get('resourceType') in supported_examples}")
 
 # Check for PHI fields
 if resource.get('resourceType') == 'Patient':

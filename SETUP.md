@@ -44,7 +44,7 @@ npm install -g @medscrub/mcp
 npm list -g @medscrub/mcp
 
 # You should see something like:
-# └── @medscrub/mcp@1.0.0
+# └── @medscrub/mcp@0.1.10
 ```
 
 ---
