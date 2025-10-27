@@ -117,7 +117,7 @@ result = client.deidentify_fhir(patient)
 
 # Send to Claude (no PHI exposed)
 analysis = claude.messages.create(
-    model="claude-3-5-sonnet-20241022",
+    model="claude-3-5-sonnet-20251022",
     messages=[{
         "role": "user",
         "content": f"Analyze this patient's vitals and labs: {result['deidentifiedResource']}"
@@ -357,10 +357,10 @@ See **[COMMUNITY.md](./COMMUNITY.md)** for Discord posting guidelines.
 If you use MedScrub in academic research, please cite:
 
 ```bibtex
-@software{medscrub2024,
+@software{medscrub2025,
   title = {MedScrub: HIPAA-Compliant FHIR De-identification},
   author = {MedScrub Team},
-  year = {2024},
+  year = {2025},
   url = {https://medscrub.dev},
   note = {99.9% accurate PHI removal for healthcare AI workflows}
 }
@@ -376,21 +376,6 @@ If you use MedScrub in academic research, please cite:
 - **Encryption:** AES-256 at rest, TLS 1.3 in transit
 - **Audit Logs:** Complete compliance trail (Enterprise tier)
 - **Self-Hosted Option:** Complete data control, no external API calls
-
----
-
-## 🎯 JupyterCon 2024
-
-**Submitted by:** MedScrub Team
-**Category:** Healthcare Data Science
-**Keywords:** FHIR, HIPAA, PHI De-identification, AI-Assisted Analysis, MCP
-
-**What attendees will learn:**
-1. HIPAA-compliant data science workflows in Jupyter
-2. AI-assisted analysis with automatic PHI protection (MCP)
-3. 99.9% accurate FHIR de-identification
-4. Real-world clinical research examples
-5. Integration with Claude Code and other AI tools
 
 ---
 
