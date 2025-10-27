@@ -1,0 +1,89 @@
+PATIENT CLINICAL NOTE
+Date: January 15, 2024
+
+PATIENT INFORMATION:
+Name: John Robert Smith
+DOB: 03/15/1985 (Age: 39)
+MRN: MRN-12345-ABC
+SSN: 123-45-6789
+
+CONTACT INFORMATION:
+Address: 123 Main Street, Apartment 4B, Boston, MA 02134
+Phone: 617-555-1234 (home), 617-555-5678 (mobile)
+Email: john.smith@example.com
+
+EMERGENCY CONTACT:
+Name: Jane Smith (wife)
+Phone: 617-555-9999
+
+VISIT DATE: 01/15/2024
+PROVIDER: Dr. Sarah Johnson, MD
+NPI: 1234567890
+
+CHIEF COMPLAINT:
+Patient presents with persistent elevated blood glucose levels over the past 3 months.
+
+HISTORY OF PRESENT ILLNESS:
+Mr. Smith is a 39-year-old male with a history of Type 2 Diabetes Mellitus diagnosed in 2020. He reports polyuria, polydipsia, and fatigue. Last HbA1c on 12/01/2023 was 8.5%. Patient admits to poor medication adherence over the holidays.
+
+PAST MEDICAL HISTORY:
+- Type 2 Diabetes Mellitus (2020)
+- Hypertension (2018)
+- Hyperlipidemia (2019)
+
+CURRENT MEDICATIONS:
+- Metformin 1000mg PO BID
+- Lisinopril 20mg PO daily
+- Atorvastatin 40mg PO QHS
+
+VITAL SIGNS:
+BP: 138/88 mmHg
+HR: 82 bpm
+Temp: 98.6°F
+RR: 16/min
+Weight: 195 lbs
+Height: 5'10"
+BMI: 28.0
+
+PHYSICAL EXAMINATION:
+General: Alert and oriented x3, no acute distress
+HEENT: Normocephalic, atraumatic
+Cardiovascular: Regular rate and rhythm, no murmurs
+Respiratory: Clear to auscultation bilaterally
+Extremities: No edema, pedal pulses 2+ bilaterally
+
+LABORATORY RESULTS (01/15/2024):
+Glucose (fasting): 185 mg/dL (H)
+HbA1c: 8.5% (H)
+Creatinine: 1.1 mg/dL
+eGFR: >60 mL/min/1.73m²
+
+ASSESSMENT AND PLAN:
+1. Type 2 Diabetes Mellitus, poorly controlled
+   - Increase Metformin to 1000mg PO TID
+   - Consider adding GLP-1 agonist if no improvement in 3 months
+   - Refer to diabetes education
+   - Schedule follow-up in 3 months
+
+2. Hypertension, well-controlled
+   - Continue current medications
+   - Monitor BP at home
+
+FOLLOW-UP:
+Patient to return in 3 months or sooner if symptoms worsen.
+Next appointment scheduled for: 04/15/2024
+
+Patient education provided regarding:
+- Importance of medication adherence
+- Dietary modifications (limit simple carbohydrates)
+- Regular exercise (30 minutes daily)
+- Home glucose monitoring
+
+SIGNED:
+Dr. Sarah Johnson, MD
+License #: MD-987654
+Date: 01/15/2024, 2:30 PM
+
+Device ID used for visit: GLUCOSE-METER-SN-ABC123
+IP Address logged: 192.168.1.100
+Facility: Boston Medical Center, 1 Boston Medical Center Pl, Boston, MA 02118

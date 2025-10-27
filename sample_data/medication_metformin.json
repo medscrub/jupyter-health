@@ -1,0 +1,101 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "metformin-example",
+  "status": "active",
+  "intent": "order",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "6809",
+        "display": "Metformin"
+      }
+    ],
+    "text": "Metformin 1000mg"
+  },
+  "subject": {
+    "reference": "Patient/example-patient-john-doe",
+    "display": "John Robert Smith"
+  },
+  "authoredOn": "2024-01-15T14:30:00Z",
+  "requester": {
+    "reference": "Practitioner/dr-sarah-johnson",
+    "display": "Dr. Sarah Johnson, MD"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "44054006",
+          "display": "Type 2 Diabetes Mellitus"
+        }
+      ]
+    }
+  ],
+  "dosageInstruction": [
+    {
+      "sequence": 1,
+      "text": "1000mg PO TID with meals",
+      "timing": {
+        "repeat": {
+          "frequency": 3,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "26643006",
+            "display": "Oral route"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                "code": "ordered",
+                "display": "Ordered"
+              }
+            ]
+          },
+          "doseQuantity": {
+            "value": 1000,
+            "unit": "mg",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
+          }
+        }
+      ]
+    }
+  ],
+  "dispenseRequest": {
+    "validityPeriod": {
+      "start": "2024-01-15",
+      "end": "2024-04-15"
+    },
+    "numberOfRepeatsAllowed": 2,
+    "quantity": {
+      "value": 180,
+      "unit": "tablets",
+      "system": "http://unitsofmeasure.org",
+      "code": "{tablet}"
+    },
+    "expectedSupplyDuration": {
+      "value": 60,
+      "unit": "days",
+      "system": "http://unitsofmeasure.org",
+      "code": "d"
+    }
+  },
+  "note": [
+    {
+      "text": "Increased from 1000mg BID due to poor glycemic control (HbA1c 8.5%)"
+    }
+  ]
+}
