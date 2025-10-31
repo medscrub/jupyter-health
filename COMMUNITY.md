@@ -2,7 +2,7 @@
 
 ## 💬 Join the Discussion
 
-**Discord:** [Join JupyterCon Healthcare AI Community](https://discord.gg/MKF5V2C3)
+**Discord:** [Join MedScrub Healthcare AI Community](https://discord.gg/MKF5V2C3)
 
 Connect with healthcare data scientists, clinical researchers, and AI developers using MedScrub for HIPAA-compliant analysis.
 
