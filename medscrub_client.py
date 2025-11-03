@@ -117,7 +117,8 @@ class MedScrubClient:
     def deidentify_fhir(
         self,
         resource: Dict[str, Any],
-        session_id: Optional[str] = None
+        session_id: Optional[str] = None,
+        output_format: str = "json"
     ) -> Dict[str, Any]:
         """
         De-identify a FHIR resource or Bundle
@@ -125,10 +126,11 @@ class MedScrubClient:
         Args:
             resource: FHIR resource (Patient, Observation, etc.) or Bundle
             session_id: Optional session ID for continued de-identification
+            output_format: Output format - "json" (default), "json-compact", "python-dict", or "llm-optimized"
 
         Returns:
             Dictionary containing:
-                - deidentifiedResource: De-identified FHIR resource
+                - deidentifiedResource: De-identified FHIR resource (format depends on output_format)
                 - sessionId: Session ID for re-identification
                 - detectedPHI: List of detected PHI fields
                 - processingTime: Processing time in milliseconds
@@ -141,13 +143,21 @@ class MedScrubClient:
                 "birthDate": "1990-01-15"
             }
 
+            # Standard JSON format
             result = client.deidentify_fhir(patient)
             print(f"De-identified: {result['deidentifiedResource']}")
             print(f"Session ID: {result['sessionId']}")
+
+            # Python dict format (for Jupyter notebooks)
+            result = client.deidentify_fhir(patient, output_format="python-dict")
+            print(result['deidentifiedResource'])  # Copy/paste ready Python dict
         """
         url = f"{self.config.api_url}/api/fhir/deidentify"
 
-        payload = {"resource": resource}
+        payload = {
+            "resource": resource,
+            "outputFormat": output_format
+        }
         if session_id:
             payload["sessionId"] = session_id
 

@@ -56,6 +56,7 @@ jupyter notebook
 | **[03_fhir_resources.ipynb](./notebooks/03_fhir_resources.ipynb)** | All 77 FHIR resource types | 20 min | FHIR integration, EHR systems |
 | **[04_data_science_workflow.ipynb](./notebooks/04_data_science_workflow.ipynb)** | End-to-end clinical research | 30 min | **Population health, ML models** |
 | **[05_mcp_demo_script.ipynb](./notebooks/05_mcp_demo_script.ipynb)** | Presentation demo | 5 min | Hackathons, JupyterCon demos |
+| **[06_claude_api_integration.ipynb](./notebooks/06_claude_api_integration.ipynb)** 🆕 | Direct Claude API (no copy/paste!) | 20 min | **AI-assisted data analysis, Jupyter workflows** |
 
 ---
 
@@ -85,6 +86,51 @@ npm install -g @medscrub/mcp
 ```
 
 **Now you can:** Ask Claude to de-identify patient data, analyze cohorts, generate insights - all with automatic PHI protection!
+
+---
+
+## 🆕 Claude API Integration (Notebook 06)
+
+**NEW:** Skip copy/paste entirely - call Claude API directly from Jupyter with automatic PHI protection!
+
+### What's Different?
+
+| Feature | MCP (Notebooks 02, 05) | Claude API (Notebook 06) |
+|---------|------------------------|--------------------------|
+| **Setup** | Requires Claude Desktop | Just Python (`pip install anthropic`) |
+| **Workflow** | Ask Claude in Desktop → Copy → Paste to Jupyter | Call Claude API directly from Jupyter code |
+| **Best For** | Exploratory analysis, ad-hoc queries | Automated workflows, reproducible analysis |
+| **PHI Protection** | ✅ Automatic | ✅ Automatic |
+
+### Quick Start (Notebook 06)
+
+```python
+from medscrub_claude import MedScrubClaude
+
+# Initialize client (requires MedScrub JWT + Claude API key)
+client = MedScrubClaude(
+    medscrub_jwt="your-jwt",
+    claude_api_key="your-claude-key"
+)
+
+# Ask Claude about patient data - PHI automatically scrubbed!
+result = client.ask_about_fhir(
+    resource=patient_data,
+    question="What medications is this patient taking?"
+)
+
+print(result['answer'])  # Original PHI automatically restored
+```
+
+**Benefits:**
+- ✅ Zero copy/paste friction
+- ✅ No Python syntax errors
+- ✅ Reproducible workflows
+- ✅ Batch processing
+- ✅ Multi-turn conversations
+- ✅ PHI never sent to Claude API
+
+**See:** [Notebook 06: Claude API Integration](./notebooks/06_claude_api_integration.ipynb)
 
 ---
 
